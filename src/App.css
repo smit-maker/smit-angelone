@@ -32,6 +32,10 @@
   }
 }
 
+.App {
+  text-align: center;
+}
+
 .card {
   padding: 2em;
 }
