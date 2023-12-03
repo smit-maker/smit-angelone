@@ -37,7 +37,7 @@ const TokenPage: React.FC = () => {
     })
       .then(response => response.json())
       .then(data => {
-        setResponseDataList(data.data.map(item => ({
+        setResponseDataList(data.data.map((item: { toString: () => any; }[]) => ({
           timestamp: item[0],
           open: item[1].toString(),
           high: item[2].toString(),
@@ -60,11 +60,11 @@ const TokenPage: React.FC = () => {
     fetchData();
   };
   
-  const getHighClass = (responseData, responseDataList) => {
+  const getHighClass = (responseData: { timestamp?: string; open?: string; high: any; low?: string; close?: string; volume?: string; }, responseDataList: any[]) => {
     return responseData.high >= Math.max(...responseDataList.map(item => parseFloat(item.high))) ? 'table-primary' : 'table-warning';
   };
   
-  const getLowClass = (responseData, responseDataList) => {
+  const getLowClass = (responseData: { timestamp?: string; open?: string; high?: string; low: any; close?: string; volume?: string; }, responseDataList: any[]) => {
     return responseData.low <= Math.min(...responseDataList.map(item => parseFloat(item.low))) ? 'table-primary' : 'table-warning';
   };
 
