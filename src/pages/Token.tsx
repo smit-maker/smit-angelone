@@ -87,19 +87,19 @@ const TokenPage: React.FC = () => {
               </div>
 
               <div className="col-auto">
-                <input className="form-control" type="text" placeholder="" value={token} onChange={(e) => setToken(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="41011" onChange={(e) => setToken(e.target.value)}/>
               </div>
               
               <div className="col-auto">
-                <input className="form-control" type="text" placeholder="" value={interval} onChange={(e) => seItnterval(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="FIVE_MINUTE" onChange={(e) => seItnterval(e.target.value)}/>
               </div>
               
               <div className="col-auto">
-                <input className="form-control" type="text" placeholder="" value={fromdate} onChange={(e) => setFromdate(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="2023-12-01 09:30" onChange={(e) => setFromdate(e.target.value)}/>
               </div>
               
               <div className="col-auto">
-                <input className="form-control" type="text" placeholder="" value={todate} onChange={(e) => setTodate(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="2023-12-01 09:45" onChange={(e) => setTodate(e.target.value)}/>
               </div>
               
               <div className="col-auto">
